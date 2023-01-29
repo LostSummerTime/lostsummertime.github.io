@@ -1,0 +1,717 @@
+@charset "utf-8";
+
+/*
+*
+* - - - - - - -
+*
+* Lang: ru_RU
+* Команда Lost Summmer Time - vk.com/lost.summer.time
+* Главный в команде NiktoX2 - vk.com/niktox2
+* Дата - 15.01.2023
+*
+* - - - - - - -
+* Root
+* - - - - - - -
+*
+*/
+
+:root {
+	/* Мучаем себя до конца, хоть потом и забудется,
+	Ты же помнишь что твоя память чистит себя
+	Многое же не нужно и не требуется */
+	--niktox2: #120503; /* 12.05.2003 (Первая, был не прав, ошибся, прости)*/
+	--niktox2_Sorry-it-didnt-work-out: #141004; /* 14.10.2004 (*.12.2021-*.*.2022)*/
+	/* Начальные переменные */
+	--background: transparent;
+	--background-hover: transparent;
+	--color: transparent;
+	--icon: transparent;
+	/* Размер текста */
+	--default-font-size: 1rem; /* 16px */
+	--default-font-size-h6: 1.25rem; /* 20px */
+	--default-font-size-h5: 1.5rem; /* 24px */
+	--default-font-size-h4: 1.75rem; /* 28px */
+	--default-font-size-h3: 2rem; /* 32px */
+	--default-font-size-h2: 2.25rem; /* 36px */
+	--default-font-size-h1: 2.50rem; /* 40px */
+	/* - */
+	--white: rgb(255, 255, 255); /* fff */
+	--gray: rgb(128, 128, 128); /* 808080 */
+	--black: rgb(0, 0, 0); /* 000 */
+	--dark: rgb(32, 32, 32); /* 202020 */
+	/* позже рассмотреть на возможное удаление */
+	--rgb42: rgb(42, 42, 42); /* 2a2a2a */
+	--rgb52: rgb(52, 52, 52); /* 343434 */
+	--rgb62: rgb(62, 62, 62); /* 3e3e3e */
+	--rgb150: rgb(150, 150, 150); /* 969696 */
+}
+
+/*
+*
+* Root
+* - - - - - - -
+* End
+* - - - - - - -
+*
+*/
+
+/*
+*
+* - - - - - - -
+* Тема
+* - - - - - - -
+* Авто
+*
+*/
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: var(--dark);
+		--background-hover: var(--rgb62);
+		--color: var(--white);
+		--icon: var(--white);
+	}
+
+	*::selection {
+		background-color: var(--color);
+		color: var(--background);
+	}
+}
+@media (prefers-color-scheme: light) {
+	:root {
+		--background: var(--white);
+		--background-hover: var(--rgb62);
+		--color: var(--black);
+		--icon: var(--black);
+	}
+
+	*::selection {
+		background-color: var(--color);
+		color: var(--background);
+	}
+}
+
+/* Белая тема */
+
+html[data-theme="white"] {
+	--background: var(--white);
+	--background-hover: var(--rgb62);
+	--color: var(--black);
+	--icon: var(--black);
+}
+html[data-theme="white"] *::selection {
+	background-color: var(--color);
+	color: var(--background);
+}
+
+/* Темная тема */
+
+html[data-theme="dark"] {
+	--background: var(--dark);
+	--background-hover: var(--rgb62);
+	--color: var(--white);
+	--icon: var(--white);
+}
+html[data-theme="dark"] *::selection {
+	background-color: var(--color);
+	color: var(--background);
+}
+
+/* Черная тема */
+
+html[data-theme="black"] {
+	--background: var(--black);
+	--background-hover: var(--rgb62);
+	--color: var(--white);
+	--icon: var(--white);
+}
+html[data-theme="black"] *::selection {
+	background-color: var(--color);
+	color: var(--background);
+}
+
+/* Черная тема - серый текст */
+
+html[data-theme="black-gray"] {
+	--background: var(--black);
+	--background-hover: var(--rgb62);
+	--color: var(--gray);
+	--icon: var(--gray);
+}
+html[data-theme="black-gray"] *::selection {
+	background-color: var(--color);
+	color: var(--background);
+}
+
+/*
+*
+* Тема
+* - - - - - - -
+* End
+* - - - - - - -
+*
+*/
+
+/*
+*
+* - - - - - - -
+* Для всех объектов
+* - - - - - - -
+*
+*/
+
+* {
+	margin: 0;
+	border-width: 0;
+	border-style: solid;
+	padding: 0;
+
+	box-sizing: border-box;
+
+	font-family: "Roboto", "Ubuntu", "Arial", sans-serif;
+	font-size: var(--default-font-size);
+	color: var(--color);
+
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+
+	list-style: none;
+	text-decoration: none;
+
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/*
+*
+* Для всех объектов
+* - - - - - - -
+* End
+* - - - - - - -
+*
+*/
+
+/*
+*
+* - - - - - - -
+* Объекты
+* - - - - - - -
+*
+*/
+
+html, body { min-width: 320px; min-height: 320px }
+
+body {
+	background-color: var(--background);
+	justify-content: center;
+	line-height: 1.3;
+}
+
+body, body * { display: flex }
+
+header, footer { padding: 2rem 0 1rem }
+
+h1 { font-size: var(--default-font-size-h1) }
+h2 { font-size: var(--default-font-size-h2) }
+h3 { font-size: var(--default-font-size-h3) }
+h4 { font-size: var(--default-font-size-h4) }
+h5 { font-size: var(--default-font-size-h5) }
+h6 { font-size: var(--default-font-size-h6) }
+
+p {  }
+
+span {  }
+
+a { width: 100%; align-items: center }
+a > * { z-index: -1 }
+
+button { background-color: transparent; cursor: pointer }
+
+input { cursor: pointer }
+
+textarea {
+	width: 100%;
+	border-width: 1px;
+	padding: 0.5rem;
+	background: transparent;
+	tab-size: 3;
+	resize: none;
+}
+
+svg { fill: var(--icon) }
+
+img { object-fit: cover }
+
+script { display: none }
+
+/*
+*
+* Объекты
+* - - - - - - -
+* End
+* - - - - - - -
+*
+*/
+
+/*
+*
+* - - - - - - -
+* Свои объекты
+* - - - - - - -
+*
+*/
+
+/* SVG иконки */
+
+.icon, .icon > svg { width: 1.5rem; height: 1.5rem }
+.icon[data-wSize="2rem"], .icon[data-wSize="2rem"] > svg { width: 2rem; height: 2rem }
+.icon[data-wSize="2.5rem"], .icon[data-wSize="2.5rem"] > svg { width: 2.5rem; height: 2.5rem }
+.icon[data-wSize="3rem"], .icon[data-wSize="3rem"] > svg { width: 3rem; height: 3rem }
+
+/* Меню */
+
+nav#menu > ul > li { align-items: center }
+nav#menu > ul > li > a > span { user-select: none }
+
+/* Select */
+
+div#select * { user-select: none }
+div#select > div#option {
+	width: 10rem;
+	margin-top: 0.5rem;
+	position: absolute;
+	top: 100%;
+}
+div#select > div#option * { width: 100% }
+
+/*
+*
+* Свои объекты
+* - - - - - - -
+* End
+* - - - - - - -
+*
+*/
+
+/*
+*
+* - - - - - - -
+* Class
+* - - - - - - -
+*
+*/
+
+/* Z - Index */
+
+*[data-z="100"] { z-index: 100 }
+*[data-z="10"] { z-index: 10 }
+*[data-z="1"] { z-index: 1 }
+
+/* Display */
+
+.hide, *[data-hide], *[data-hide="on"] { display: none }
+
+/* Размеры */
+
+.w, .wList > * { width: 100% }
+.w[data-wSize="100vw"], .w[data-wDisplay="full"], .wv { width: 100vw }
+
+.h { height: 100% }
+.h[data-hSize="100vh"], .h[data-hDisplay="full"], .hv { height: 100vh }
+
+.wh { width: 100%; height: 100% }
+.whv { width: 100vw; height: 100vh }
+
+.wMax { width: max-content }
+.hMax { height: max-content }
+
+.wMin { width: min-content }
+.hMin { height: min-content }
+
+/* Padding */
+
+.p[data-pSize="0.5rem"] { padding: 0.5rem }
+.pTop[data-pSize="0.5rem"] { padding-top: 0.5rem }
+.pRight[data-pSize="0.5rem"] { padding-right: 0.5rem }
+.pBottom[data-pSize="0.5rem"] { padding-bottom: 0.5rem }
+.pLeft[data-pSize="0.5rem"] { padding-left: 0.5rem }
+
+.pTopBottomList[data-pSize="0.5rem"] > * { padding-top: 0.5rem; padding-bottom: 0.5rem }
+.pTopBottomList[data-pChild="first"] > *:first-child { padding-top: 0 }
+.pTopBottomList[data-pChild="last"] > *:last-child { padding-bottom: 0 }
+
+.pTopBottom[data-pSize="0.5rem"] { padding-top: 0.5rem; padding-bottom: 0.5rem }
+.pRightLeft[data-pSize="0.5rem"] { padding-right: 0.5rem; padding-left: 0.5rem }
+
+.p[data-pSize="1rem"] { padding: 1rem }
+.pTop[data-pSize="1rem"] { padding-top: 1rem }
+.pRight[data-pSize="1rem"] { padding-right: 1rem }
+.pBottom[data-pSize="1rem"] { padding-bottom: 1rem }
+.pLeft[data-pSize="1rem"] { padding-left: 1rem }
+
+.pTopBottom[data-pSize="1rem"] { padding-top: 1rem; padding-bottom: 1rem }
+.pRightLeft[data-pSize="1rem"] { padding-right: 1rem; padding-left: 1rem }
+
+/* Border */
+
+.borderRadius[data-brSize="0.5rem"] { border-radius: 0.5rem }
+.borderRadiusTopLeft[data-brSize="0.5rem"] { border-top-left-radius: 0.5rem }
+.borderRadiusTopRight[data-brSize="0.5rem"] { border-top-right-radius: 0.5rem }
+.borderRadiusBottomRight[data-brSize="0.5rem"] { border-bottom-right-radius: 0.5rem }
+.borderRadiusBottomLeft[data-brSize="0.5rem"] { border-bottom-left-radius: 0.5rem }
+
+.borderRadius[data-brSize="1rem"] { border-radius: 1rem }
+.borderRadiusTopLeft[data-brSize="1rem"] { border-top-left-radius: 1rem }
+.borderRadiusTopRight[data-brSize="1rem"] { border-top-right-radius: 1rem }
+.borderRadiusBottomRight[data-brSize="1rem"] { border-bottom-right-radius: 1rem }
+.borderRadiusBottomLeft[data-brSize="1rem"] { border-bottom-left-radius: 1rem }
+
+/* Margin */
+
+.m[data-mSize="0.5rem"] { margin: 0.5rem }
+.mTop[data-mSize="0.5rem"] { margin-top: 0.5rem }
+.mRight[data-mSize="0.5rem"] { margin-right: 0.5rem }
+.mBottom[data-mSize="0.5rem"] { margin-bottom: 0.5rem }
+.mLeft[data-mSize="0.5rem"] { margin-left: 0.5rem }
+
+.mTopBottom[data-mSize="0.5rem"] { margin-top: 0.5rem; margin-bottom: 0.5rem }
+.mRightLeft[data-mSize="0.5rem"] { margin-right: 0.5rem; margin-left: 0.5rem }
+
+.m[data-mSize="1rem"] { margin: 1rem }
+.mTop[data-mSize="1rem"] { margin-top: 1rem }
+.mRight[data-mSize="1rem"] { margin-right: 1rem }
+.mBottom[data-mSize="1rem"] { margin-bottom: 1rem }
+.mLeft[data-mSize="1rem"] { margin-left: 1rem }
+
+.mTopBottom[data-mSize="1rem"] { margin-top: 1rem; margin-bottom: 1rem }
+.mRightLeft[data-mSize="1rem"] { margin-right: 1rem; margin-left: 1rem }
+
+.mBottomList[data-mSize="1rem"] > * { margin-bottom: 1rem }
+.mBottomList[data-mSize="1rem"] > *:last-child { margin-bottom: 0 }
+
+/* Position */
+
+*[data-position="relative"],
+.relative { position: relative }
+
+*[data-position="absolute"],
+.absolute { position: absolute }
+
+*[data-position="fixed"],
+.fixed { position: fixed }
+
+/* Flex - Direction */
+
+.fColumn, .fColumnList > * { flex-direction: column }
+
+/* Justify - Content */
+
+*[data-jContent="center"],
+.jContent[data-jC="center"] { justify-content: center }
+
+*[data-jContent="flex-start"],
+.jContent[data-jC="flex-start"] { justify-content: flex-start }
+
+*[data-jContent="flex-end"],
+.jContent[data-jC="flex-end"] { justify-content: flex-end }
+
+*[data-jContent="space-between"],
+.jContent[data-jC="space-between"] { justify-content: space-between }
+
+*[data-jContent="space-around"],
+.jContent[data-jC="space-around"] { justify-content: space-around }
+
+*[data-jContent="space-evenly"],
+.jContent[data-jC="space-evenly"] { justify-content: space-evenly }
+
+/* Положение текста */
+
+*[data-tAlign="left"],
+.textAlign[data-tAlign="left"] { text-align: left }
+
+*[data-tAlign="center"],
+.textAlign[data-tAlign="center"] { text-align: center }
+
+*[data-tAlign="right"],
+.textAlign[data-tAlign="right"] { text-align: right }
+
+/* Cursor */
+
+*[data-cursor="pointer"],
+.cursor[data-cursor="pointer"] { cursor: pointer }
+
+/* Лимит размера */
+
+@supports(width: clamp(200px, 95%, 1200px)) { .limitSize[data-wSize="1200"] { width: clamp(200px, 95%, 1200px) }}
+@supports not (width: clamp(200px, 95%, 1200px)) { .limitSize[data-wSize="1200"] { max-width: 1200px; width: 95%; min-width: 200px }}
+
+/* Линия */
+
+.line { border-top-color: var(--color) }
+.line[data-brSize="1px"] { border-top-width: 1px }
+.line[data-brSize="2px"] { border-top-width: 2px }
+
+.lineAnimateList > * { position: relative }
+.lineAnimate::before,
+.lineAnimateList > *::before {
+	position: absolute;
+	content: "";
+	left: 0;
+	bottom: 0;
+	width: 0;
+	border-top-width: 0;
+	background-color: var(--color);
+	transition: 0.6s ease-out;
+}
+
+.lineAnimate[data-lineSize="1px"]::before,
+.lineAnimateList[data-lineSize="1px"] > *::before { height: 1px }
+.lineAnimate[data-lineSize="2px"]::before,
+.lineAnimateList[data-lineSize="2px"] > *::before { height: 2px }
+
+.lineAnimate:hover::before,
+.lineAnimateList > *:hover::before { width: 100% }
+
+/*
+*
+* Class
+* - - - - - - -
+* End
+* - - - - - - -
+*
+*/
+
+/*
+*
+* - - - - - - -
+* Scrollbar
+* - - - - - - -
+*
+*/
+
+@supports(scrollbar-width: thin) {
+	html[data-scrollbar="lst-white"] * {
+		scrollbar-width: thin;
+		scrollbar-color: var(--color) transparent;
+	}
+}
+
+html[data-scrollbar="lst-white"] *::-webkit-scrollbar { width: 1rem }
+
+html[data-scrollbar="lst-white"] *::-webkit-scrollbar-thumb {
+	box-shadow: inset 0 0 10px 10px var(--color);
+	border: transparent solid 5px;
+	border-radius: 1rem;
+}
+
+html[data-scrollbar="lst-white"] *::-webkit-scrollbar-corner {
+	background: transparent;
+	width: 0;
+	height: 0;
+}
+
+/*
+*
+* Scrollbar
+* - - - - - - -
+* End
+* - - - - - - -
+*
+*/
+
+/*
+*
+* - - - - - - -
+* Cursors
+* - - - - - - -
+*
+*/
+
+@media (hover: hover) {
+	html[data-cursor="jepriCreations"] *
+	{ cursor: url("/assets/cursor/jepriCreations/light/pointer.cur"), default }
+
+	html[data-cursor="jepriCreations"] *[data-cursor="pointer"],
+	html[data-cursor="jepriCreations"] a,
+	html[data-cursor="jepriCreations"] button,
+	html[data-cursor="jepriCreations"] nav > ul > li,
+	html[data-cursor="jepriCreations"] .lineAnimate[data-brSize$="px"],
+	html[data-cursor="jepriCreations"] #select *
+	{ cursor: url("/assets/cursor/jepriCreations/light/link.cur"), pointer }
+
+
+	html[data-theme="white"][data-cursor="jepriCreations"] *
+	{ cursor: url("/assets/cursor/jepriCreations/dark/pointer.cur"), default }
+
+	html[data-theme="white"][data-cursor="jepriCreations"] *[data-cursor="pointer"],
+	html[data-theme="white"][data-cursor="jepriCreations"] a,
+	html[data-theme="white"][data-cursor="jepriCreations"] button,
+	html[data-theme="white"][data-cursor="jepriCreations"] nav > ul > li,
+	html[data-theme="white"][data-cursor="jepriCreations"] .lineAnimate[data-brSize$="px"],
+	html[data-theme="white"][data-cursor="jepriCreations"] #select *
+	{ cursor: url("/assets/cursor/jepriCreations/dark/link.cur"), pointer }
+}
+
+/*
+*
+* Cursors
+* - - - - - - -
+* End
+* - - - - - - -
+*
+*/
+
+/*
+*
+* - - - - - - -
+* Медиа
+* - - - - - - -
+*
+*/
+
+@media screen and (max-width: 430px) {
+	* { font-size: var(--default-font-size-h6); }
+	h5 { font-size: var(--default-font-size-h4) }
+}
+
+/*
+*
+* Медиа
+* - - - - - - -
+* End
+* - - - - - - -
+*
+*/
+
+/*
+*
+* - - - - - - -
+* Шрифты
+* - - - - - - -
+*
+	https://gwfh.mranftl.com/fonts/roboto?subsets=cyrillic,cyrillic-ext,latin,latin-ext
+	Last modified 2022-09-22 (v30)
+*
+*/
+
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: normal; /* 400 */
+	src:
+		local("Roboto"),
+		local("Roboto Regular"),
+		local("Roboto-Regular"),
+		url("/assets/fonts/roboto/400/normal/roboto.woff2") format("woff2"), /* Super Modern Browsers | Chrome 26+, Opera 23+, Firefox 39+ */
+		url("/assets/fonts/roboto/400/normal/roboto.woff") format("woff"), /* Modern Browsers | Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+		url("/assets/fonts/roboto/400/normal/roboto.ttf") format("truetype"); /* Safari, Android, iOS */
+	font-display: fallback;
+}
+@font-face {
+	font-family: "Roboto";
+	font-style: italic;
+	font-weight: normal;
+	src:
+		local("Roboto"),
+		local("Roboto Italic"),
+		local("Roboto-Italic"),
+		url("/assets/fonts/roboto/400/italic/roboto.woff2") format("woff2"),
+		url("/assets/fonts/roboto/400/italic/roboto.woff") format("woff"),
+		url("/assets/fonts/roboto/400/italic/roboto.ttf") format("truetype");
+	font-display: fallback;
+}
+@font-face {
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: bold; /* 700 */
+	src:
+		local("Roboto"),
+		local("Roboto Bold"),
+		local("Roboto-Bold"),
+		url("/assets/fonts/roboto/700/normal/roboto.woff2") format("woff2"),
+		url("/assets/fonts/roboto/700/normal/roboto.woff") format("woff"),
+		url("/assets/fonts/roboto/700/normal/roboto.ttf") format("truetype");
+	font-display: fallback;
+}
+@font-face {
+	font-family: "Roboto";
+	font-style: italic;
+	font-weight: bold;
+	src:
+		local("Roboto"),
+		local("Roboto Bold Italic"),
+		local("Roboto-Bold-Italic"),
+		url("/assets/fonts/roboto/700/italic/roboto.woff2") format("woff2"),
+		url("/assets/fonts/roboto/700/italic/roboto.woff") format("woff"),
+		url("/assets/fonts/roboto/700/italic/roboto.ttf") format("truetype");
+	font-display: fallback;
+}
+
+/*
+*
+	https://gwfh.mranftl.com/fonts/ubuntu?subsets=cyrillic,cyrillic-ext,latin,latin-ext
+	Last modified 2022-09-22 (v20)
+*
+*/
+
+@font-face {
+	font-family: "Ubuntu";
+	font-style: normal;
+	font-weight: normal; /* 400 */
+	src:
+		local("Ubuntu"),
+		local("Ubuntu Regular"),
+		local("Ubuntu-Regular"),
+		url("/assets/fonts/ubuntu/400/normal/ubuntu.woff2") format("woff2"),
+		url("/assets/fonts/ubuntu/400/normal/ubuntu.woff") format("woff"),
+		url("/assets/fonts/ubuntu/400/normal/ubuntu.ttf") format("truetype");
+	font-display: fallback;
+}
+@font-face {
+	font-family: "Ubuntu";
+	font-style: italic;
+	font-weight: normal;
+	src:
+		local("Ubuntu"),
+		local("Ubuntu Regular Italic"),
+		local("Ubuntu-Regular-Italic"),
+		url("/assets/fonts/ubuntu/400/italic/ubuntu.woff2") format("woff2"),
+		url("/assets/fonts/ubuntu/400/italic/ubuntu.woff") format("woff"),
+		url("/assets/fonts/ubuntu/400/italic/ubuntu.ttf") format("truetype");
+	font-display: fallback;
+}
+@font-face {
+	font-family: "Ubuntu";
+	font-style: normal;
+	font-weight: bold; /* 700 */
+	src:
+		local("Ubuntu"),
+		local("Ubuntu Bold"),
+		local("Ubuntu-Bold"),
+		url("/assets/fonts/ubuntu/700/normal/ubuntu.woff2") format("woff2"),
+		url("/assets/fonts/ubuntu/700/normal/ubuntu.woff") format("woff"),
+		url("/assets/fonts/ubuntu/700/normal/ubuntu.ttf") format("truetype");
+	font-display: fallback;
+}
+@font-face {
+	font-family: "Ubuntu";
+	font-style: italic;
+	font-weight: bold;
+	src:
+		local("Ubuntu"),
+		local("Ubuntu Bold Italic"),
+		local("Ubuntu-Bold-Italic"),
+		url("/assets/fonts/ubuntu/700/italic/ubuntu.woff2") format("woff2"),
+		url("/assets/fonts/ubuntu/700/italic/ubuntu.woff") format("woff"),
+		url("/assets/fonts/ubuntu/700/italic/ubuntu.ttf") format("truetype");
+	font-display: fallback;
+}
+
+/*
+*
+* Шрифты
+* - - - - - - -
+* End
+* - - - - - - -
+*
+*/

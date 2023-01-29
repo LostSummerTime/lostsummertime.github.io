@@ -1,0 +1,151 @@
+<!doctype html>
+<html
+lang="ru"
+id="lst"
+class="wh"
+data-theme="dark"
+data-scrollbar="lst-white"
+data-cursor="jepriCreations"
+data-cursor-option="*"
+prefix="og: https://ogp.me/ns#"
+xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+ondragstart="return false"
+oncontextmenu="return false">
+<head>
+	<meta charset="utf-8">
+	<title>Главная</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta name="author" content="NiktoX2">
+	<meta name="vk-author" content="https://vk.com/niktox2">
+	<meta name="website-author" content="https://niktox2.github.io">
+	<meta name="website-author-future" content="https://niktox2.ru">
+
+	<meta name="team" content="Lost Summer Time">
+	<meta name="vk-team" content="https://vk.com/lost.summer.time">
+	<meta name="vk-team-future" content="https://vk.com/lostsummertime">
+	<meta name="website-team" content="https://lostsummertime.github.io">
+	<meta name="website-team-future" content="https://lostsummertime.ru">
+
+	<meta name="website-version" content="1.0">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="">
+	<meta property="og:description" content="">
+	<meta property="og:url" content="">
+	<meta property="og:locale" content="ru_RU">
+	<meta property="og:image" content="">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+
+	<link id="favicon-svg" rel="icon" href="/assets/favicon/svg.svg" type="image/svg+xml">
+	<link id="favicon-png" rel="icon" href="/assets/favicon/png.png" type="image/png">
+
+	<link title="Lost Summer Time" hreflang="ru" href="/assets/css/lostsummertime-dev.css?v1.0.0" rel="stylesheet preload" as="style">
+	<link title="Pages" hreflang="ru" href="/assets/css/page.css?v1.0.0" rel="stylesheet preload" as="style">
+
+	<script rel="preload" as="script" src="/assets/js/lostsummertime-dev.js?v1.0.0"></script>
+	<script> lst.log( "Библиотека от Lost Summer Time подключена" ) </script>
+	<script> lst(() => {  }) </script>
+	<script defer></script>
+</head>
+<body class="wh relative">
+	<div class="fColumn limitSize" data-wSize="1200">
+		<header></header>
+
+		<main class="h">
+			<nav id="menu" style="width: 12rem;" class="mRight" data-mSize="1rem">
+				<ul class="w fColumn pTopBottomList lineAnimateList" data-pSize="0.5rem" data-lineSize="1px">
+					<li><a href="/">
+						<i class="icon mRight" data-mSize="0.5rem"><svg><use xlink:href="#svgIconHome"></use></svg></i>
+						<span>Главная</span>
+					</a></li>
+
+					<li><a href="/articles.html">
+						<i class="icon mRight" data-mSize="0.5rem"><svg><use xlink:href="#svgIconArticle"></use></svg></i>
+						<span>Статьи</span>
+					</a></li>
+
+					<li>
+						<div id="select" class="relative">
+							<span id="title">Черная и темный текст</span>
+							<i class="icon mLeft" data-mSize="0.5rem"><svg><use xlink:href="#svgIconExpandMore"></use></svg></i>
+							<div id="option" class="hide">
+								<ul class="fColumn">
+									<li><span data-value="white">Белая</span></li>
+									<li><span data-value="dark">Темная</span></li>
+									<li><span data-value="black">Черная</span></li>
+									<li><span data-value="black-gray">Черная и темный текст</span></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</nav>
+
+			<div class="w">
+				<ul id="logs" class="fColumn fColumnList mBottomList" data-mSize="1rem">
+					<li>
+						<h5>29.01.2023</h5>
+						<p>В целом можно позориться и это выкладывать</p>
+					</li>
+				</ul>
+			</div>
+		</main>
+
+		<footer></footer>
+	</div>
+
+
+	<div id="contextMenu" class="borderRadius absolute hide" data-z="10" data-brSize="0.5rem">
+		<ul class="fColumn">
+			<li><button class="pTopBottom" data-pSize="0.5rem" onclick="lst.copyText()">Копировать</button></li>
+			<li><button class="pTopBottom" data-pSize="0.5rem" onclick="lst.pasteText()">Вставить</button></li>
+		</ul>
+	</div>
+
+	<div id="menuPhone" style="bottom: 0;" class="w absolute hide" data-z="10">
+		<nav class="w">
+			<ul class="w wList">
+				<li><a href="/" class="p jContent" data-pSize="0.5rem" data-jC="center">
+					<i class="icon" data-wSize="2rem">
+						<svg><use xlink:href="#svgIconHome"></use></svg>
+					</i>
+				</a></li>
+				<li><a href="/articles.html" class="p jContent" data-pSize="0.5rem" data-jC="center">
+					<i class="icon" data-wSize="2rem">
+						<svg><use xlink:href="#svgIconArticle"></use></svg>
+					</i>
+				</a></li>
+				<li><button class="w p jContent" data-pSize="0.5rem" data-jC="center">
+					<i class="icon" data-wSize="2rem">
+						<svg><use xlink:href="#svgIconSettings"></use></svg>
+					</i>
+				</button></li>
+			</ul>
+		</nav>
+	</div>
+
+
+	<div data-hide>
+		<svg id="icon">
+			<!-- google
+				https://fonts.google.com/icons?icon.style=Rounded&icon.set=Material+Icons
+			-->
+			<symbol id="svgIconHome" viewBox="0 0 24 24" width="100%" height="100%">
+				<path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z"></path>
+			</symbol>
+			<symbol id="svgIconArticle" viewBox="0 0 24 24" width="100%" height="100%">
+				<path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M13,17H8c-0.55,0-1-0.45-1-1 c0-0.55,0.45-1,1-1h5c0.55,0,1,0.45,1,1C14,16.55,13.55,17,13,17z M16,13H8c-0.55,0-1-0.45-1-1c0-0.55,0.45-1,1-1h8 c0.55,0,1,0.45,1,1C17,12.55,16.55,13,16,13z M16,9H8C7.45,9,7,8.55,7,8c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1 C17,8.55,16.55,9,16,9z"></path>
+			</symbol>
+			<symbol id="svgIconExpandMore" viewBox="0 0 24 24" width="100%" height="100%">
+				<path d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"></path>
+			</symbol>
+			<symbol id="svgIconSettings" viewBox="0 0 24 24" width="100%" height="100%">
+				<path d="M19.5,12c0-0.23-0.01-0.45-0.03-0.68l1.86-1.41c0.4-0.3,0.51-0.86,0.26-1.3l-1.87-3.23c-0.25-0.44-0.79-0.62-1.25-0.42 l-2.15,0.91c-0.37-0.26-0.76-0.49-1.17-0.68l-0.29-2.31C14.8,2.38,14.37,2,13.87,2h-3.73C9.63,2,9.2,2.38,9.14,2.88L8.85,5.19 c-0.41,0.19-0.8,0.42-1.17,0.68L5.53,4.96c-0.46-0.2-1-0.02-1.25,0.42L2.41,8.62c-0.25,0.44-0.14,0.99,0.26,1.3l1.86,1.41 C4.51,11.55,4.5,11.77,4.5,12s0.01,0.45,0.03,0.68l-1.86,1.41c-0.4,0.3-0.51,0.86-0.26,1.3l1.87,3.23c0.25,0.44,0.79,0.62,1.25,0.42 l2.15-0.91c0.37,0.26,0.76,0.49,1.17,0.68l0.29,2.31C9.2,21.62,9.63,22,10.13,22h3.73c0.5,0,0.93-0.38,0.99-0.88l0.29-2.31 c0.41-0.19,0.8-0.42,1.17-0.68l2.15,0.91c0.46,0.2,1,0.02,1.25-0.42l1.87-3.23c0.25-0.44,0.14-0.99-0.26-1.3l-1.86-1.41 C19.49,12.45,19.5,12.23,19.5,12z M12.04,15.5c-1.93,0-3.5-1.57-3.5-3.5s1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5S13.97,15.5,12.04,15.5z"></path>
+			</symbol>
+		</svg>
+	</div>
+</body>
+</html>

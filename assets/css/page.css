@@ -1,0 +1,10 @@
+:root {
+	/* Размер текста */
+	--default-font-size: 1rem; /* 16px */
+	--default-font-size-h6: 1.25rem; /* 20px */
+	--default-font-size-h5: 1.5rem; /* 24px */
+	--default-font-size-h4: 1.75rem; /* 28px */
+	--default-font-size-h3: 2rem; /* 32px */
+	--default-font-size-h2: 2.25rem; /* 36px */
+	--default-font-size-h1: 2.50rem; /* 40px */
+}
