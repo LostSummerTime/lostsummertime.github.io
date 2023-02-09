@@ -28,30 +28,32 @@ oncontextmenu="return false">
 	<meta name="website-team" content="https://lostsummertime.github.io">
 	<meta name="website-team-future" content="https://lostsummertime.ru">
 
-	<meta name="website-version" content="1.0">
+	<meta name="website-version" content="1.1.0">
+	<meta name="website-version-data" content="08.02.2023">
 
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="">
-	<meta property="og:description" content="">
-	<meta property="og:url" content="">
+	<meta property="og:title" content="Lost Summer Time Logs">
+	<meta property="og:description" content="Временный сайт(и не только) на GitHub, пока что смотрим всякое тута, а в будущем все будет получше">
+	<meta property="og:url" content="LostSummerTime.GitHub.IO">
 	<meta property="og:locale" content="ru_RU">
 	<meta property="og:image" content="">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
 
-	<link id="favicon-svg" rel="icon" href="/assets/favicon/svg.svg" type="image/svg+xml">
-	<link id="favicon-png" rel="icon" href="/assets/favicon/png.png" type="image/png">
+	<link id="favicon-svg" rel="icon" href="/favicon.svg" type="image/svg+xml">
+	<link id="favicon-png" rel="icon" href="/favicon.png" type="image/png">
 
-	<link title="Lost Summer Time" hreflang="ru" href="/assets/css/lostsummertime-dev.css?v1.0.0" rel="stylesheet preload" as="style">
-	<link title="Pages" hreflang="ru" href="/assets/css/page.css?v1.0.0" rel="stylesheet preload" as="style">
+	<!-- https://developer.mozilla.org/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers -->
+	<link rel="manifest" href="/manifest.webmanifest">
 
-	<script rel="preload" as="script" src="/assets/js/lostsummertime-dev.js?v1.0.0"></script>
-	<script> lst.log( "Библиотека от Lost Summer Time подключена" ) </script>
-	<script> lst(() => {  }) </script>
-	<script defer></script>
+	<link title="Lost Summer Time" hreflang="ru" href="/assets/css/lostsummertime-dev.css?v1.1.0" rel="stylesheet preload" as="style">
+	<!--<link title="Page" hreflang="ru" href="/page.css?v1.1.0" rel="stylesheet preload" as="style">-->
+
+	<script rel="preload" as="script" src="/assets/js/lostsummertime-dev.js?v1.1.0"></script>
+	<script rel="preload" as="script" src="/assets/js/lostsummertime.js?v1.1.0"></script>
 </head>
-<body class="wh relative">
-	<div class="fColumn limitSize" data-wSize="1200">
+<body class="wHMax relative">
+	<div class="fColumn" data-limitSize="1200">
 		<header></header>
 
 		<main class="h">
@@ -62,33 +64,79 @@ oncontextmenu="return false">
 						<span>Главная</span>
 					</a></li>
 
-					<li><a href="/articles.html">
+					<li><a href="/articles/index.html">
 						<i class="icon mRight" data-mSize="0.5rem"><svg><use xlink:href="#svgIconArticle"></use></svg></i>
 						<span>Статьи</span>
 					</a></li>
 
-					<li>
-						<div id="select" class="relative">
-							<span id="title">Черная и темный текст</span>
-							<i class="icon mLeft" data-mSize="0.5rem"><svg><use xlink:href="#svgIconExpandMore"></use></svg></i>
-							<div id="option" class="hide">
-								<ul class="fColumn">
-									<li><span data-value="white">Белая</span></li>
-									<li><span data-value="dark">Темная</span></li>
-									<li><span data-value="black">Черная</span></li>
-									<li><span data-value="black-gray">Черная и темный текст</span></li>
-								</ul>
-							</div>
+					<li><div id="select" class="w relative">
+						<span id="title" class="w">Темная</span>
+						<i class="icon" data-cursor="pointer"><svg><use xlink:href="#svgIconExpandMore"></use></svg></i>
+						<div id="option" class="hide">
+							<ul class="fColumn">
+								<li><span data-value="white">Белая</span></li>
+								<li><span data-value="dark">Темная</span></li>
+								<li><span data-value="black">Черная</span></li>
+								<li><span data-value="black-gray">Черная и темный текст</span></li>
+							</ul>
 						</div>
-					</li>
+					</div></li>
 				</ul>
 			</nav>
 
 			<div class="w">
 				<ul id="logs" class="fColumn fColumnList mBottomList" data-mSize="1rem">
-					<li>
-						<h5>29.01.2023</h5>
-						<p>В целом можно позориться и это выкладывать</p>
+					<li><h3>09.02.2023</h3>
+						<ol class="fColumn">
+							<li><p>Переписана библиотека js (осталось немного перенести)</p></li>
+							<li><p>Все svg иконки что могу и не могут пригодится добавлены</p></li>
+							<li><p>Сформирован примерный стандарт для написания сайта от Lost Summer Time</p></li>
+							<li><p>Сериал что весил 100гб (122), теперь весит 40+</p></li>
+							<li><p>Стиль заглушек сделан</p></li>
+							<li><p>В будущем будет переписана таблица стилей css</p></li>
+							<li><p>Что же, публикуем обновление</p></li>
+						</ol>
+						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
+					</li>
+
+					<li><h3>08.02.2023</h3>
+						<ol class="fColumn">
+							<li><p>Почти обновили файл js</p></li>
+							<li><p>Изменена структура файлов</p></li>
+							<li><p>Изменены стандарты в некоторых направлениях</p></li>
+						</ol>
+						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
+					</li>
+
+					<li><h3>01.02.2023</h3>
+						<ol class="fColumn">
+							<li><p>Смотрим лайки в Тт и чистим их )</p></li>
+							<li><p>Теория об том, что, если NiktoX2 начинает чистить что либо, это плохой знак</p></li>
+						</ol>
+						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
+					</li>
+
+					<li><h3>31.01.2023</h3>
+						<ol class="fColumn">
+							<li><p>Сериал весит под 100гб, а это еще без последнего сезона, хотя ладно, если обработать, думаю можно будет выиграть немного места</p></li>
+							<li><p>На грани почистить лайки в Тт и еще где-то (какой это уровень безумия?)</p></li>
+						</ol>
+						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
+					</li>
+
+					<li><h3>30.01.2023</h3>
+						<ol class="fColumn">
+							<li><p>Исправлен баг с шрифтом</p></li>
+							<li><p>Начальные этапы добавления анимации</p></li>
+							<li><p>Начальная разметка для будущих страниц</p></li>
+							<li><p>Различные технические изменения и исправления</p></li>
+						</ol>
+						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
+					</li>
+
+					<li><h3>29.01.2023</h3>
+						<ol><li><p>В целом можно позориться и это выкладывать</p></li></ol>
+						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
 					</li>
 				</ul>
 			</div>
@@ -105,21 +153,21 @@ oncontextmenu="return false">
 		</ul>
 	</div>
 
-	<div id="menuPhone" style="bottom: 0;" class="w absolute hide" data-z="10">
+	<div id="menuPhone" style="bottom: 0;" class="w fixed hide" data-z="10" data-background="theme">
 		<nav class="w">
 			<ul class="w wList">
 				<li><a href="/" class="p jContent" data-pSize="0.5rem" data-jC="center">
-					<i class="icon" data-wSize="2rem">
+					<i class="icon" data-wSize="1.75rem">
 						<svg><use xlink:href="#svgIconHome"></use></svg>
 					</i>
 				</a></li>
-				<li><a href="/articles.html" class="p jContent" data-pSize="0.5rem" data-jC="center">
-					<i class="icon" data-wSize="2rem">
+				<li><a href="/articles/index.html" class="p jContent" data-pSize="0.5rem" data-jC="center">
+					<i class="icon" data-wSize="1.75rem">
 						<svg><use xlink:href="#svgIconArticle"></use></svg>
 					</i>
 				</a></li>
 				<li><button class="w p jContent" data-pSize="0.5rem" data-jC="center">
-					<i class="icon" data-wSize="2rem">
+					<i class="icon" data-wSize="1.75rem">
 						<svg><use xlink:href="#svgIconSettings"></use></svg>
 					</i>
 				</button></li>
@@ -127,11 +175,14 @@ oncontextmenu="return false">
 		</nav>
 	</div>
 
+	<div id="menuSettingsPhone" class="hide"></div>
+
 
 	<div data-hide>
 		<svg id="icon">
-			<!-- google
+			<!-- Google
 				https://fonts.google.com/icons?icon.style=Rounded&icon.set=Material+Icons
+				4.0.0 - 1 сентября 2020
 			-->
 			<symbol id="svgIconHome" viewBox="0 0 24 24" width="100%" height="100%">
 				<path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z"></path>
@@ -144,6 +195,14 @@ oncontextmenu="return false">
 			</symbol>
 			<symbol id="svgIconSettings" viewBox="0 0 24 24" width="100%" height="100%">
 				<path d="M19.5,12c0-0.23-0.01-0.45-0.03-0.68l1.86-1.41c0.4-0.3,0.51-0.86,0.26-1.3l-1.87-3.23c-0.25-0.44-0.79-0.62-1.25-0.42 l-2.15,0.91c-0.37-0.26-0.76-0.49-1.17-0.68l-0.29-2.31C14.8,2.38,14.37,2,13.87,2h-3.73C9.63,2,9.2,2.38,9.14,2.88L8.85,5.19 c-0.41,0.19-0.8,0.42-1.17,0.68L5.53,4.96c-0.46-0.2-1-0.02-1.25,0.42L2.41,8.62c-0.25,0.44-0.14,0.99,0.26,1.3l1.86,1.41 C4.51,11.55,4.5,11.77,4.5,12s0.01,0.45,0.03,0.68l-1.86,1.41c-0.4,0.3-0.51,0.86-0.26,1.3l1.87,3.23c0.25,0.44,0.79,0.62,1.25,0.42 l2.15-0.91c0.37,0.26,0.76,0.49,1.17,0.68l0.29,2.31C9.2,21.62,9.63,22,10.13,22h3.73c0.5,0,0.93-0.38,0.99-0.88l0.29-2.31 c0.41-0.19,0.8-0.42,1.17-0.68l2.15,0.91c0.46,0.2,1,0.02,1.25-0.42l1.87-3.23c0.25-0.44,0.14-0.99-0.26-1.3l-1.86-1.41 C19.49,12.45,19.5,12.23,19.5,12z M12.04,15.5c-1.93,0-3.5-1.57-3.5-3.5s1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5S13.97,15.5,12.04,15.5z"></path>
+			</symbol>
+			<!-- SimpleIcons
+				https://simpleicons.org/
+				https://github.com/simple-icons/simple-icons/releases
+				8.4.0 - 30.01.2023
+			-->
+			<symbol id="svgIcon" viewBox="0 0 24 24" width="100%" height="100%">
+				<path d=""></path>
 			</symbol>
 		</svg>
 	</div>

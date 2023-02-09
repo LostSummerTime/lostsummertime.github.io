@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Python</title>
+</head>
+<body>
+	<div>
+		<code lang="python">
+			<textarea>
+				credit = int(input("Займ"))
+				percent = int(input("Процент займа")) / 100 / 12
+				month = int(input("На сколько месяцев"))
+
+				monthly_payment = credit * ( (percent * (1 + percent)**month) / ((1 + percent)**month - 1) )
+
+				overpayment = (monthly_payment * month) - credit
+
+				print("{:.2f}".format(overpayment))
+			</textarea>
+		</code>
+
+		<code lang="python">
+			<textarea>
+				from os import getcwd, scandir
+				from shutil import copyfile
+
+				path = getcwd() + "/assets/icon/google/src"
+				path_2 = getcwd() + "/test"
+
+
+				for folder in scandir(path):
+					if folder.is_dir():
+						print("Папка: " + folder.name)
+						for folders in scandir(path + "/" + folder.name):
+							if folders.is_dir() and folders.name == "materialiconsround":
+								print(folders.name)
+								for files in scandir(path + "/" + folder.name + "/" + folders.name):
+									if files.is_file() and files.name == "24px.svg":
+										print(files.name)
+										copyfile(path + "/" + folder.name + "/" + folders.name + "/" + files.name, path_2 + "/" + folder.name + ".svg")
+			</textarea>
+		</code>
+
+		<pre><code class="language-js">
+			document.querySelectorAll('textarea').forEach(el => {
+				el.style.height = el.setAttribute('style', 'height: ' + el.scrollHeight + 'px');
+				el.classList.add('auto');
+				el.addEventListener('input', e => {
+					el.style.height = 'auto';
+					el.style.height = (el.scrollHeight) + 'px';
+				});
+			});
+		</code></pre>
+	</div>
+</body>
+</html>
+

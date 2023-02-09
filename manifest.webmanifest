@@ -1,0 +1,21 @@
+{
+	"lang": "ru",
+	"dir": "ltr",
+	"orientation": "natural",
+	"display": "standalone",
+	"theme_color": "#202020",
+	"background_color": "#202020",
+	"name": "Lost Summer Time",
+	"short_name": "LostSummerTime",
+	"description": "Временный сайт(и не только) на GitHub, пока что смотрим всякое тута, а в будущем все будет получше",
+	"id": "/",
+	"scope": "/",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "favicon.svg",
+			"sizes": "150x150",
+			"type": "image/svg+xml"
+		}
+	]
+}
