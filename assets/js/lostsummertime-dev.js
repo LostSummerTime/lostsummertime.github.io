@@ -4,10 +4,10 @@
 *
 * charset "utf-8"
 * Lang: ru_RU
-* Команда Lost Summmer Time - vk.com/lost.summer.time
+* Команда Lost Summer Time - vk.com/lost.summer.time
 * В будущем vk.com/lostsummertime
 * Главный в команде NiktoX2 - vk.com/niktox2
-* Дата - **.02.2023
+* Дата - **.03.2023
 *
 * - - - - - - -
 * Библиотека Lost Summer Time
@@ -15,7 +15,7 @@
 *
 */
 
-(function (global) {
+;(function (global) {
 	"use strict"
 
 	/*
@@ -26,7 +26,55 @@
 	*
 	*/
 
+	global.onerror = (message, url, line, col, error) => {
+		let isOn = false
+
+		if (isOn) {
+			console.log(message)
+			console.log(url)
+			console.log(line)
+			console.log(col)
+			console.log(error)
+			return true;
+		}
+	}
+
+
+
 	let lostSummerTime_MouseX = 0, lostSummerTime_MouseY = 0
+
+
+	function lostSummerTime_Console(a = {header: "", body: "", option: ""}) {
+		const text = "Lost Summer Time"
+
+		let textConsole = a.header ? `${text} (${a.header}): ${a.body}` : `${text}: ${a.body}`
+
+		switch (a.option) {
+			case "error":
+				console.error(textConsole)
+				break;
+			case "log":
+				console.error(textConsole)
+				break;
+			default:
+				console.log(textConsole)
+				break;
+		}
+	}
+
+	function lostSummerTime_ConsoleText() {
+		
+	}
+
+
+	function lostSummerTime_ArrayCorrection(a) {
+		
+	}
+
+
+	function lostSummerTime_CorrectingList(a) {
+		
+	}
 
 
 
@@ -40,11 +88,16 @@
 				item = document.querySelector(item) ? document.querySelector(item) :
 				document.querySelector(`.${item}`) ? document.querySelector(`.${item}`) :
 				document.querySelector(`#${item}`) ? document.querySelector(`#${item}`) :
-				console.error(`Lost Summer Time (объект): Объект ${item} не был обнаружен (возможно он не был загружен)`)
+
+				lostSummerTime_Console({
+					header: "объект",
+					body: `Объект ${item} не был обнаружен (возможно он не был загружен)`,
+					option: "error"
+				})
 
 				return new lostSummerTime_Class(item)
 			} else {
-				console.log("Lost Summer Time: Нужна помочь?")
+				lostSummerTime_Console({body: "Нужна помочь?"})
 			}
 		}
 	}
@@ -64,7 +117,10 @@
 
 			return item
 		} else {
-			console.error("Lost Summer Time (create): Не был указан тег элемента")
+			lostSummerTime_Console({
+				header: "create",
+				body: "Не был указан тег элемента"
+			})
 		}
 	}
 
@@ -108,8 +164,81 @@
 				})
 			}
 		} else {
-			console.error("Lost Summer Time (newTextarea): Нету ни одного textarea");
+			lostSummerTime_Console({
+				header: "newTextarea",
+				body: "Нету ни одного textarea"
+			})
 		}
+	}
+
+	lostSummerTime.newSelect = () => {
+		if (document.querySelector("#select")) {
+			document.querySelectorAll("#select").forEach((a) => {
+				let
+					selectTitle = a.querySelector("#title"),
+					selectOption = a.querySelector("#option")
+				;
+
+				a.addEventListener("click", () => { selectOption.classList.toggle("hide") })
+
+				selectOption.querySelectorAll("span").forEach((a) => {
+					a.addEventListener("click", () => {
+						selectTitle.textContent = a.textContent
+						document.documentElement.setAttribute("data-theme", a.getAttribute("data-value"))
+						selectOption.classList.remove("hide")
+					})
+				})
+			})
+		} else {
+			lostSummerTime_Console({
+				header: "newSelect",
+				body: "Нет ни одного #select"
+			})
+		}
+	}
+
+	lostSummerTime.class_AddToggleRemove = (a = {item: "", action: "", class: ""}) => {
+		if (a.item) {
+			switch (a.action) {
+				case "add":
+					if (a.class) {
+						document.querySelector(a.item).classList.add(a.class)
+					} else {
+						lostSummerTime_Console({
+							header: "Class (Add Toggle Remove)",
+							body: "Вы не указали класс (class)",
+							option: "error"
+						})
+					}
+					break;
+				case "toggle":
+					document.querySelector(a.item).classList.toggle(a.class)
+					break;
+				case "remove":
+					document.querySelector(a.item).classList.remove(a.class)
+					break;
+				default:
+					lostSummerTime_Console({
+						header: "Class (Add Toggle Remove)",
+						body: "Вы не указали действие (action)",
+						option: "error"
+					})
+					break;
+			}
+		} else {
+			lostSummerTime_Console({
+				header: "Class (Add Toggle Remove)",
+				body: "Вы не указали элемент которому будет все применяться (item)",
+				option: "error"
+			})
+		}
+	}
+
+	lostSummerTime.class_AddToggleRemove.info = () => {
+		lostSummerTime_Console({
+			header: "Class (Add Toggle Remove)",
+			body: 'Взаимодействие с классами, добавить, убрать, либо автоматически будет делать действие\nПередавать требуется список\nСписок имеет следующий формат\n{item: "", action: "", class: ""}\n'
+		})
 	}
 
 
@@ -209,23 +338,4 @@
 * End
 * - - - - - - -
 *
-*/
-
-/*
-*
-* - - - - - - -
-* - - - - - - -
-* - - - - - - -
-* - - - - - - -
-* - - - - - - -
-*
-*/
-
-/*
-document.body.querySelectorAll("*").forEach((e) => {
-	console.log(e.attributes) // dataset
-	.forEach((name, value) => {
-		console.log(`Name: ${name}\nValue: ${value}`)
-	})
-})
 */

@@ -4,9 +4,9 @@
 *
 * charset "utf-8"
 * Lang: ru_RU
-* Команда Lost Summmer Time - vk.com/lost.summer.time
+* Команда Lost Summer Time - vk.com/lost.summer.time
 * Главный в команде NiktoX2 - vk.com/niktox2
-* Дата - **.02.2023
+* Дата - **.03.2023
 *
 * - - - - - - -
 * Пока что так
@@ -51,15 +51,23 @@ document.addEventListener("DOMContentLoaded", () => {
 	/*  */
 
 	function sizeBodyForMenu() {
-		if (body.clientWidth <= 430) { menu.classList.add("hide"); menuPhone.classList.remove("hide") }
-		else { menu.classList.remove("hide"); menuPhone.classList.add("hide") }
+		if (body.clientWidth <= 680) {
+			menu.classList.add("hide");
+			menuPhone.classList.remove("hide");
+			document.querySelector("footer").style.padding = `16px 0 ${document.querySelector("#menuPhone").clientHeight + 4}px`
+		}
+		else {
+			menu.classList.remove("hide");
+			menuPhone.classList.add("hide");
+			document.querySelector("footer").style.padding = null;
+		}
 	}
 
 	sizeBodyForMenu()
 
 	window.addEventListener("resize", sizeBodyForMenu)
-
-	/* Select and option */
+/*
+	Select and option
 	if (document.getElementById("select")) {
 		document.querySelectorAll("#select").forEach((a) => {
 			let
@@ -70,14 +78,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			a.addEventListener("click", () => { selectOption.classList.toggle("hide") })
 			selectOption.querySelectorAll("span").forEach((a) => {
 				a.addEventListener("click", () => {
-					selectOption.classList.toggle("hide")
 					selectTitle.textContent = a.textContent
 					document.documentElement.setAttribute("data-theme", a.getAttribute("data-value"))
+					selectOption.classList.add("hide")
 				})
 			})
 		})
 	}
-
+*/
 	/* Работа Textarea для набора сообщений */
 	if (document.querySelector("textarea")) {
 		document.querySelectorAll("textarea").forEach((a) => {
@@ -98,3 +106,22 @@ document.addEventListener("DOMContentLoaded", () => {
 		})
 	}
 })
+
+/*
+*
+* - - - - - - -
+* - - - - - - -
+* - - - - - - -
+* - - - - - - -
+* - - - - - - -
+*
+*/
+
+/*
+document.body.querySelectorAll("*").forEach((e) => {
+	console.log(e.attributes) // dataset
+	.forEach((name, value) => {
+		console.log(`Name: ${name}\nValue: ${value}`)
+	})
+})
+*/

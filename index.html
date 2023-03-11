@@ -1,7 +1,6 @@
-<!doctype html>
-<html
+<!doctype html><html
 lang="ru"
-id="lst"
+id="lostsummertime"
 class="wh"
 data-theme="dark"
 data-scrollbar="lst-white"
@@ -10,12 +9,11 @@ data-cursor-option="*"
 prefix="og: https://ogp.me/ns#"
 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 ondragstart="return false"
-oncontextmenu="return false">
-<head>
-	<meta charset="utf-8">
+oncontextmenu="return false"
+><head><meta charset="utf-8">
 	<title>Главная</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- minimum-scale=0.1-10, maximum-scale=0.1-10 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
 
 	<meta name="author" content="NiktoX2">
 	<meta name="vk-author" content="https://vk.com/niktox2">
@@ -23,70 +21,200 @@ oncontextmenu="return false">
 	<meta name="website-author-future" content="https://niktox2.ru">
 
 	<meta name="team" content="Lost Summer Time">
+	<meta name="mail-team" content="mail@lostsummertime.ru">
 	<meta name="vk-team" content="https://vk.com/lost.summer.time">
 	<meta name="vk-team-future" content="https://vk.com/lostsummertime">
 	<meta name="website-team" content="https://lostsummertime.github.io">
 	<meta name="website-team-future" content="https://lostsummertime.ru">
 
-	<meta name="website-version" content="1.1.0">
-	<meta name="website-version-data" content="08.02.2023">
-
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Lost Summer Time Logs">
 	<meta property="og:description" content="Временный сайт(и не только) на GitHub, пока что смотрим всякое тута, а в будущем все будет получше">
+
 	<meta property="og:url" content="LostSummerTime.GitHub.IO">
 	<meta property="og:locale" content="ru_RU">
-	<meta property="og:image" content="">
+	<meta property="og:image" content="/ogimage.png">
 	<meta property="og:image:width" content="1200">
 	<meta property="og:image:height" content="630">
 
-	<link id="favicon-svg" rel="icon" href="/favicon.svg" type="image/svg+xml">
-	<link id="favicon-png" rel="icon" href="/favicon.png" type="image/png">
+	<link id="favicon-svg" href="/favicon.svg?v1" rel="icon" type="image/svg+xml">
+	<link id="favicon-png" href="/favicon.png?v1" rel="icon" type="image/png">
 
 	<!-- https://developer.mozilla.org/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers -->
-	<link rel="manifest" href="/manifest.webmanifest">
+	<link href="/manifest.webmanifest?v1" rel="manifest">
 
-	<link title="Lost Summer Time" hreflang="ru" href="/assets/css/lostsummertime-dev.css?v1.1.0" rel="stylesheet preload" as="style">
+	<link title="Lost Summer Time" href="/assets/css/lostsummertime-dev.css?v1" hreflang="ru" rel="stylesheet preload" as="style">
 	<!--<link title="Page" hreflang="ru" href="/page.css?v1.1.0" rel="stylesheet preload" as="style">-->
 
-	<script rel="preload" as="script" src="/assets/js/lostsummertime-dev.js?v1.1.0"></script>
-	<script rel="preload" as="script" src="/assets/js/lostsummertime.js?v1.1.0"></script>
-</head>
-<body class="wHMax relative">
+	<script src="/assets/js/lostsummertime-dev.js?v1" rel="preload" as="script" charset="utf-8"></script>
+	<script src="/assets/js/lostsummertime.js?v1" rel="preload" as="script" charset="utf-8"></script>
+</head><body class="wHMax relative">
+	<noscript class="z-1000 whv fixed">
+		<p>Была отключена возможность использовать скрипты (js)</p>
+		<p>Включите ее, чтоб можно было пользоваться сайтом</p>
+	</noscript>
+
 	<div class="fColumn" data-limitSize="1200">
-		<header></header>
+		<header>
+			<div>
+				<i class="mr icon-x3"><svg><use xlink:href="#svgIconLSTLogo"></use></svg></i>
+				<div class="fColumn jContent-center">
+					<h6 data-title="Всегда рады тебе :>">Lost Summer Time</h6>
+					<p data-color="128" data-title="Посмотрим что будет дальше )">Beta/git version</p>
+				</div>
+			</div>
+		</header>
 
 		<main class="h">
-			<nav id="menu" style="width: 12rem;" class="mRight" data-mSize="1rem">
-				<ul class="w fColumn pTopBottomList lineAnimateList" data-pSize="0.5rem" data-lineSize="1px">
-					<li><a href="/">
-						<i class="icon mRight" data-mSize="0.5rem"><svg><use xlink:href="#svgIconHome"></use></svg></i>
-						<span>Главная</span>
-					</a></li>
+			<nav id="menu" class="mr-x2" style="width: 192px">
+				<ul class="w ptb-list fColumn lineAnimate-list">
+					<li>
+						<a href="/">
+							<i class="mr icon"><svg><use xlink:href="#svgIconHome"></use></svg></i>
+							<span>Главная</span>
+						</a>
+					</li>
 
-					<li><a href="/articles/index.html">
-						<i class="icon mRight" data-mSize="0.5rem"><svg><use xlink:href="#svgIconArticle"></use></svg></i>
-						<span>Статьи</span>
-					</a></li>
+					<li>
+						<a href="/articles/index.html">
+							<i class="mr icon"><svg><use xlink:href="#svgIconArticle"></use></svg></i>
+							<span>Статьи</span>
+						</a>
+					</li>
 
-					<li><div id="select" class="w relative">
-						<span id="title" class="w">Темная</span>
-						<i class="icon" data-cursor="pointer"><svg><use xlink:href="#svgIconExpandMore"></use></svg></i>
-						<div id="option" class="hide">
-							<ul class="fColumn">
+					<li class="lineAnimate-off">
+						<div id="select" class="w relative fColumn">
+							<div>
+								<span id="title" class="w">Темная</span>
+								<i class="icon"><svg><use xlink:href="#svgIconExpandMore"></use></svg></i>
+							</div>
+							<ul id="option" class="w wList fColumn hide">
 								<li><span data-value="white">Белая</span></li>
 								<li><span data-value="dark">Темная</span></li>
 								<li><span data-value="black">Черная</span></li>
-								<li><span data-value="black-gray">Черная и темный текст</span></li>
+								<li><span data-value="black-gray">Черная+</span></li>
 							</ul>
 						</div>
-					</div></li>
+					</li>
 				</ul>
 			</nav>
 
 			<div class="w">
-				<ul id="logs" class="fColumn fColumnList mBottomList" data-mSize="1rem">
-					<li><h3>09.02.2023</h3>
+				<ul id="logs" class="mb-x2-list fColumn fColumnList">
+					<li>
+						<h3>11.03.2023</h3>
+						<ol class="fColumn">
+							<li><p>Надо подумать и начать делать одну удобную вещь</p></li>
+						</ol>
+						<span class="signature">Администрация</span>
+					</li>
+
+					<li>
+						<h3>10.03.2023</h3>
+						<ol class="fColumn">
+							<li><p>Эксперименты в разных направлениях и доделки всякого</p></li>
+						</ol>
+						<span class="signature">Администрация</span>
+					</li>
+
+					<li>
+						<h3>09.03.2023</h3>
+						<ol class="fColumn">
+							<li><p>Переписаны классы и удалены бессмысленные атрибуты data</p></li>
+							<li><p>Переделан смысл в файле css</p></li>
+							<li><p>Добавлена адаптация для шрифтов (beta)</p></li>
+							<li><p>Возможно переписать адаптацию под ваши нужды (beta)</p></li>
+							<li><p>Проверки и отключения ненужных вещей для телефонов</p></li>
+							<li><p>Когда нибудь будет меню для телефона</p></li>
+						</ol>
+						<span class="signature">Администрация</span>
+					</li>
+
+					<li>
+						<h3>05.03.2023</h3>
+						<ol class="fColumn">
+							<li><p>Разработка все еще продолжается (даже как-то удивительно)</p></li>
+						</ol>
+						<span class="signature">Администрация</span>
+					</li>
+
+					<li>
+						<h3>23.02.2023</h3>
+						<ol class="fColumn">
+							<li class="fColumn">
+								<p>VK</p>
+								<ol class="ml fColumn">
+									<li><p>Удалены некоторые участники</p></li>
+									<li><p>Удалены все посты</p></li>
+									<li><p>Обновлена Подробная информация</p></li>
+									<li><p>Обновлена статья Lost Summer Time</p></li>
+									<li><p>Обновлены ссылки</p></li>
+									<li class="fColumn">
+										<p>VK Donut изменен</p>
+										<ol class="ml-x2 fColumn">
+											<li><p>Цена 199 (была 50)</p></li>
+											<li><p>Описание</p></li>
+											<li><p>Часть платного фрагмента теперь можно увидеть</p></li>
+										</ol>
+									</li>
+								</ol>
+							</li>
+							<li class="fColumn">
+								<p>Telegram</p>
+								<ol class="ml fColumn">
+									<li><p>Обновлено описание</p></li>
+								</ol>
+							</li>
+						</ol>
+						<span class="signature">Администрация</span>
+					</li>
+
+					<li>
+						<h3>17.02.2023</h3>
+						<ol class="fColumn">
+							<li><p>Эксперименты продолжаются как всегда</p></li>
+							<li><p>Логотип Lost Summer Time все же добавили на сайт</p></li>
+						</ol>
+						<span class="signature">Администрация</span>
+					</li>
+
+					<li>
+						<h3>14.02.2023</h3>
+						<ol class="fColumn">
+							<li><p>Продолжается проработка файла css и написание html</p></li>
+							<li><p>В VSCode посмотрели как добавить свои варианты чего либо</p></li>
+						</ol>
+						<span class="signature">Администрация</span>
+					</li>
+
+					<li>
+						<h3>12.02.2023</h3>
+						<p>Изменения в css (попытка вести обновление в файлах)</p>
+						<ol class="fColumn">
+							<li><p>Добавлен data-ageLimitation</p></li>
+							<li><p>Класс sizeText был удален, теперь только data-sizeText</p></li>
+							<li><p>Класс textAlign был удален, теперь только data-textAlign</p></li>
+							<li><p>data-position был удален, теперь только классы со соответствующем названием позиции</p></li>
+							<li><p>data-hSize был удален, теперь только классы</p></li>
+							<li><p>Класс jContent был удален, теперь только data-jContent</p></li>
+							<li><p>rotate был дополнен</p></li>
+							<li><p>Классы p m rb были изменены на data</p></li>
+						</ol>
+						<p class="mt">Появилась идея по созданию модульного варианта css (такое же разделение на dev(-dev к файлу) и release(без -dev к файлу))</p>
+						<p>Появилась идея создать scss</p>
+						<span class="signature">Администрация</span>
+					</li>
+
+					<li>
+						<h3>11.02.2023</h3>
+						<ol class="fColumn">
+							<li><p>Продолжается работа над сайтом</p></li>
+						</ol>
+						<span class="signature">Администрация</span>
+					</li>
+
+					<li>
+						<h3>09.02.2023</h3>
 						<ol class="fColumn">
 							<li><p>Переписана библиотека js (осталось немного перенести)</p></li>
 							<li><p>Все svg иконки что могу и не могут пригодится добавлены</p></li>
@@ -96,90 +224,147 @@ oncontextmenu="return false">
 							<li><p>В будущем будет переписана таблица стилей css</p></li>
 							<li><p>Что же, публикуем обновление</p></li>
 						</ol>
-						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
+						<span class="signature">Администрация</span>
 					</li>
 
-					<li><h3>08.02.2023</h3>
+					<li>
+						<h3>08.02.2023</h3>
 						<ol class="fColumn">
 							<li><p>Почти обновили файл js</p></li>
 							<li><p>Изменена структура файлов</p></li>
 							<li><p>Изменены стандарты в некоторых направлениях</p></li>
 						</ol>
-						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
+						<span class="signature">Администрация</span>
 					</li>
 
-					<li><h3>01.02.2023</h3>
+					<li>
+						<h3>01.02.2023</h3>
 						<ol class="fColumn">
 							<li><p>Смотрим лайки в Тт и чистим их )</p></li>
 							<li><p>Теория об том, что, если NiktoX2 начинает чистить что либо, это плохой знак</p></li>
 						</ol>
-						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
+						<span class="signature">Администрация</span>
 					</li>
 
-					<li><h3>31.01.2023</h3>
+					<li>
+						<h3>31.01.2023</h3>
 						<ol class="fColumn">
 							<li><p>Сериал весит под 100гб, а это еще без последнего сезона, хотя ладно, если обработать, думаю можно будет выиграть немного места</p></li>
 							<li><p>На грани почистить лайки в Тт и еще где-то (какой это уровень безумия?)</p></li>
 						</ol>
-						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
+						<span class="signature">Администрация</span>
 					</li>
 
-					<li><h3>30.01.2023</h3>
+					<li>
+						<h3>30.01.2023</h3>
 						<ol class="fColumn">
 							<li><p>Исправлен баг с шрифтом</p></li>
 							<li><p>Начальные этапы добавления анимации</p></li>
 							<li><p>Начальная разметка для будущих страниц</p></li>
 							<li><p>Различные технические изменения и исправления</p></li>
 						</ol>
-						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
+						<span class="signature">Администрация</span>
 					</li>
 
-					<li><h3>29.01.2023</h3>
+					<li>
+						<h3>29.01.2023</h3>
 						<ol><li><p>В целом можно позориться и это выкладывать</p></li></ol>
-						<span class="sizeText" data-color="128" data-tSize="0.75rem">Администрация</span>
+						<span class="signature">Администрация</span>
 					</li>
 				</ul>
 			</div>
 		</main>
 
-		<footer></footer>
+		<footer class="jContent-spaceBetween">
+			<div>
+				<ul class="fColumn">
+					<li>
+						<a href="https://vk.com/lost.summer.time">
+							<i class="icon"><svg><use xlink:href="#svgIconVK"></use></svg></i>
+							<span>Lost Summer Time</span>
+						</a>
+					</li>
+					<li>
+						<a href="https://vk.com/niktox2">
+							<i class="icon"><svg><use xlink:href="#svgIconVK"></use></svg></i>
+							<span>NiktoX2</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="aItem-flexEnd">
+				<p class="signature">© Lost Summer Time 2022-2023</p>
+			</div>
+		</footer>
 	</div>
 
-
-	<div id="contextMenu" class="borderRadius absolute hide" data-z="10" data-brSize="0.5rem">
+	<div id="contextMenu" class="z-10 br absolute hide">
 		<ul class="fColumn">
-			<li><button class="pTopBottom" data-pSize="0.5rem" onclick="lst.copyText()">Копировать</button></li>
-			<li><button class="pTopBottom" data-pSize="0.5rem" onclick="lst.pasteText()">Вставить</button></li>
+			<li><button class="ptb" onclick="lst.copyText()">Копировать</button></li>
+			<li><button class="ptb" onclick="lst.pasteText()">Вставить</button></li>
 		</ul>
 	</div>
 
-	<div id="menuPhone" style="bottom: 0;" class="w fixed hide" data-z="10" data-background="theme">
+	<div id="menuPhone" style="bottom: 0;" class="z-10 w fixed hide" data-background="theme">
 		<nav class="w">
 			<ul class="w wList">
-				<li><a href="/" class="p jContent" data-pSize="0.5rem" data-jC="center">
-					<i class="icon" data-wSize="1.75rem">
-						<svg><use xlink:href="#svgIconHome"></use></svg>
-					</i>
-				</a></li>
-				<li><a href="/articles/index.html" class="p jContent" data-pSize="0.5rem" data-jC="center">
-					<i class="icon" data-wSize="1.75rem">
-						<svg><use xlink:href="#svgIconArticle"></use></svg>
-					</i>
-				</a></li>
-				<li><button class="w p jContent" data-pSize="0.5rem" data-jC="center">
-					<i class="icon" data-wSize="1.75rem">
-						<svg><use xlink:href="#svgIconSettings"></use></svg>
-					</i>
-				</button></li>
+				<li>
+					<a class="p jContent-center" href="/">
+						<i class="icon-x2"><svg><use xlink:href="#svgIconHome"></use></svg></i>
+					</a>
+				</li>
+				<li>
+					<a class="p jContent-center" href="/articles/index.html">
+						<i class="icon-x2"><svg><use xlink:href="#svgIconArticle"></use></svg></i>
+					</a>
+				</li>
+				<li>
+					<button class="w p jContent-center" onclick="menuShowHide()">
+						<i class="icon-x2"><svg><use xlink:href="#svgIconSettings"></use></svg></i>
+					</button>
+				</li>
 			</ul>
 		</nav>
 	</div>
 
-	<div id="menuSettingsPhone" class="hide"></div>
+	<div id="menuSettingsPhone" class="z-1000 whv p-x2 fixed hide" data-background="theme">
+		<!-- overflow-y: auto; -->
+		<div class="wh jContent-center aItem-center">
+			<ul class="fColumn">
+				<li>
+					<div id="select" class="w relative fColumn" style="width: 100px;">
+						<div>
+							<span id="title" class="w">Темная</span>
+							<i class="icon"><svg><use xlink:href="#svgIconExpandMore"></use></svg></i>
+						</div>
+						<ul id="option" class="w wList fColumn hide" style="width: 100px;">
+							<li><span data-value="white">Белая</span></li>
+							<li><span data-value="dark">Темная</span></li>
+							<li><span data-value="black">Черная</span></li>
+							<li><span data-value="black-gray">Черная+</span></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+			<div class="p-x2 fixed" style="bottom: 0;">
+				<button onclick="menuShowHide()">Закрыть</button>
+			</div>
+		</div>
+	</div>
 
-
-	<div data-hide>
+	<div hide>
 		<svg id="icon">
+			<!-- Lost Summer Time -->
+			<symbol id="svgIconLSTLogo" viewBox="0 0 64 64" width="100%" height="100%">
+				<path d="M63.64 16.91c-.07 .03-.19-.12-.38-.27 0 0-.29-.23-.96-.42-.45-.13-2.82-.51-4.45 1.18-1.01 1.05-1.1 2.46-1.09 3.04 1.48 2.57 2.33 11.29-1.63 18.51 0 0-3.32 6.05-11.27 9.84-.56 .27-7.21 2.17-9.04 2.44-.03 0-.38 .07-.96 .17-.43 .1-.97 .26-1.77 .56-3.43 1.3-3.81 2.36-6.78 3.7-1.21 .55-4.16 1.85-7.93 1.87-1.47 0-1.86-.18-6.49-.37-1.35-.05-2.47-.09-3.91 .24-.76 .17-2.11 .49-3.45 1.4-2.25 1.53-2.75 3.56-3.07 3.43-.45-.18 .03-4.41 2.73-7.67 1.29-1.56 2.84-2.58 3.3-2.88 1.1-.72 2.07-1.14 3.45-1.75 2.6-1.14 4.12-1.3 4.09-1.67-.03-.31-1.16-.54-2.14-.52-2.22 .04-3.61 1.32-3.81 1.07-.19-.23 .81-1.61 2.35-2.79 1.21-.93 2.78-1.5 5.91-2.65 1.66-.61 2.23-.76 2.92-.84 1.36-.17 2.84-.05 3.24-.01 1.08 .09 1.73 .35 1.83 .14 .14-.28-.86-1.03-.98-1.13-1.47-1.11-2.8-1.2-2.79-1.4 .01-.26 2.12-.6 5.36-.37 .87 .06 1.75 .13 2.65 .22 1.2-1.67 2.46-3.41 3.73-5.17-1.33-.45-2.58-.97-3.8-1.49-3-1.26-4.72-2.52-4.62-2.75 .08-.19 1.31 .33 3.12 0 .16-.03 1.38-.25 1.39-.56 0-.23-.69-.3-1.69-.71-.38-.15-1.76-.72-2.89-1.48-.58-.39-1.02-.78-2.22-2.07-2.27-2.44-3.41-3.66-4.07-5.04-.84-1.75-1.11-3.43-.83-3.55 .29-.13 .96 1.64 2.91 2.68 .86 .46 1.98 .77 2.14 .51 .19-.31-1.08-1.14-2.89-3.33-.96-1.16-1.63-1.98-2.28-3.12-.28-.48-1.19-2.09-1.64-4.06-.94-4.13 .55-8.11 1.04-8.07 .34 .03-.13 2.06 1.19 4.44 .78 1.42 1.84 2.32 2.44 2.81 1.14 .95 2.15 1.43 3.38 1.99 4.21 1.93 4.64 1.93 5.95 2.6 3.35 1.73 5.39 4.23 6.22 5.26 2 2.5 1.9 3.61 4.23 6.22 .78-.76 1.78-1.81 2.68-3.02 .3-.4 .51-.74 .93-1.41 .9-1.42 .87-1.6 .82-1.68-.31-.45-2.29 .73-2.56 .35-.27-.38 1.2-2.26 3.3-3.69 .86-.58 1.57-.92 2.11-1.17-.84-.4-1.73-.91-2.61-1.56-1.96-1.44-3.36-3.19-3.15-3.45 .19-.23 1.53 .97 4.27 1.74 .8 .23 1.51 .4 1.94 .49-1.07-1.09-2.73-2.06-2.53-2.38 .3-.49 2.58 1.17 6.04 .87 .98-.09 1.51-.27 2.81-.25 .69 0 2.05 .02 3.37 .58 2.08 .89 3.13 2.75 3.53 3.61 1.12 .29 2.87 .9 3.23 1.99 .04 .13 .23 .74 .1 .8Z"></path>
+			</symbol>
+			<!-- Vk
+				https://vk.com/brand
+			-->
+			<symbol id="svgIconVK" viewBox="0 0 48 48" width="100%" height="100%">
+				<path d="M0 23.04C0 12.1788 0 6.74826 3.37413 3.37413C6.74826 0 12.1788 0 23.04 0H24.96C35.8212 0 41.2517 0 44.6259 3.37413C48 6.74826 48 12.1788 48 23.04V24.96C48 35.8212 48 41.2517 44.6259 44.6259C41.2517 48 35.8212 48 24.96 48H23.04C12.1788 48 6.74826 48 3.37413 44.6259C0 41.2517 0 35.8212 0 24.96V23.04Z" fill="var(--background)"></path>
+				<path d="M25.54 34.5801C14.6 34.5801 8.3601 27.0801 8.1001 14.6001H13.5801C13.7601 23.7601 17.8 27.6401 21 28.4401V14.6001H26.1602V22.5001C29.3202 22.1601 32.6398 18.5601 33.7598 14.6001H38.9199C38.0599 19.4801 34.4599 23.0801 31.8999 24.5601C34.4599 25.7601 38.5601 28.9001 40.1201 34.5801H34.4399C33.2199 30.7801 30.1802 27.8401 26.1602 27.4401V34.5801H25.54Z" fill="var(--color)"></path>
+			</symbol>
 			<!-- Google
 				https://fonts.google.com/icons?icon.style=Rounded&icon.set=Material+Icons
 				4.0.0 - 1 сентября 2020
@@ -188,13 +373,13 @@ oncontextmenu="return false">
 				<path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z"></path>
 			</symbol>
 			<symbol id="svgIconArticle" viewBox="0 0 24 24" width="100%" height="100%">
-				<path d="M19,3H5C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.1,3,19,3z M13,17H8c-0.55,0-1-0.45-1-1 c0-0.55,0.45-1,1-1h5c0.55,0,1,0.45,1,1C14,16.55,13.55,17,13,17z M16,13H8c-0.55,0-1-0.45-1-1c0-0.55,0.45-1,1-1h8 c0.55,0,1,0.45,1,1C17,12.55,16.55,13,16,13z M16,9H8C7.45,9,7,8.55,7,8c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1 C17,8.55,16.55,9,16,9z"></path>
+				<path d="M19 3H5C3.9 3 3 3.9 3 5v14c0 1.1 0.9 2 2 2h14c1.1 0 2-0.9 2-2V5C21 3.9 20.1 3 19 3z M13 17H8c-0.55 0-1-0.45-1-1 c0-0.55 0.45-1 1-1h5c0.55 0 1 0.45 1 1C14 16.55 13.55 17 13 17z M16 13H8c-0.55 0-1-0.45-1-1c0-0.55 0.45-1 1-1h8 c0.55 0 1 0.45 1 1C17 12.55 16.55 13 16 13z M16 9H8C7.45 9 7 8.55 7 8c0-0.55 0.45-1 1-1h8c0.55 0 1 0.45 1 1 C17 8.55 16.55 9 16 9z"></path>
 			</symbol>
 			<symbol id="svgIconExpandMore" viewBox="0 0 24 24" width="100%" height="100%">
 				<path d="M15.88 9.29L12 13.17 8.12 9.29c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41l4.59 4.59c.39.39 1.02.39 1.41 0l4.59-4.59c.39-.39.39-1.02 0-1.41-.39-.38-1.03-.39-1.42 0z"></path>
 			</symbol>
 			<symbol id="svgIconSettings" viewBox="0 0 24 24" width="100%" height="100%">
-				<path d="M19.5,12c0-0.23-0.01-0.45-0.03-0.68l1.86-1.41c0.4-0.3,0.51-0.86,0.26-1.3l-1.87-3.23c-0.25-0.44-0.79-0.62-1.25-0.42 l-2.15,0.91c-0.37-0.26-0.76-0.49-1.17-0.68l-0.29-2.31C14.8,2.38,14.37,2,13.87,2h-3.73C9.63,2,9.2,2.38,9.14,2.88L8.85,5.19 c-0.41,0.19-0.8,0.42-1.17,0.68L5.53,4.96c-0.46-0.2-1-0.02-1.25,0.42L2.41,8.62c-0.25,0.44-0.14,0.99,0.26,1.3l1.86,1.41 C4.51,11.55,4.5,11.77,4.5,12s0.01,0.45,0.03,0.68l-1.86,1.41c-0.4,0.3-0.51,0.86-0.26,1.3l1.87,3.23c0.25,0.44,0.79,0.62,1.25,0.42 l2.15-0.91c0.37,0.26,0.76,0.49,1.17,0.68l0.29,2.31C9.2,21.62,9.63,22,10.13,22h3.73c0.5,0,0.93-0.38,0.99-0.88l0.29-2.31 c0.41-0.19,0.8-0.42,1.17-0.68l2.15,0.91c0.46,0.2,1,0.02,1.25-0.42l1.87-3.23c0.25-0.44,0.14-0.99-0.26-1.3l-1.86-1.41 C19.49,12.45,19.5,12.23,19.5,12z M12.04,15.5c-1.93,0-3.5-1.57-3.5-3.5s1.57-3.5,3.5-3.5s3.5,1.57,3.5,3.5S13.97,15.5,12.04,15.5z"></path>
+				<path d="M19.5 12c0-0.23-0.01-0.45-0.03-0.68l1.86-1.41c0.4-0.3 0.51-0.86 0.26-1.3l-1.87-3.23c-0.25-0.44-0.79-0.62-1.25-0.42 l-2.15 0.91c-0.37-0.26-0.76-0.49-1.17-0.68l-0.29-2.31C14.8 2.38 14.37 2 13.87 2h-3.73C9.63 2 9.2 2.38 9.14 2.88L8.85 5.19 c-0.41 0.19-0.8 0.42-1.17 0.68L5.53 4.96c-0.46-0.2-1-0.02-1.25 0.42L2.41 8.62c-0.25 0.44-0.14 0.99 0.26 1.3l1.86 1.41 C4.51 11.55 4.5 11.77 4.5 12s0.01 0.45 0.03 0.68l-1.86 1.41c-0.4 0.3-0.51 0.86-0.26 1.3l1.87 3.23c0.25 0.44 0.79 0.62 1.25 0.42 l2.15-0.91c0.37 0.26 0.76 0.49 1.17 0.68l0.29 2.31C9.2 21.62 9.63 22 10.13 22h3.73c0.5 0 0.93-0.38 0.99-0.88l0.29-2.31 c0.41-0.19 0.8-0.42 1.17-0.68l2.15 0.91c0.46 0.2 1 0.02 1.25-0.42l1.87-3.23c0.25-0.44 0.14-0.99-0.26-1.3l-1.86-1.41 C19.49 12.45 19.5 12.23 19.5 12z M12.04 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5s3.5 1.57 3.5 3.5S13.97 15.5 12.04 15.5z"></path>
 			</symbol>
 			<!-- SimpleIcons
 				https://simpleicons.org/
@@ -205,6 +390,14 @@ oncontextmenu="return false">
 				<path d=""></path>
 			</symbol>
 		</svg>
+
+		<script>
+			lst.newSelect()
+
+			function menuShowHide() {
+				document.querySelector("#menuSettingsPhone").classList.toggle("hide")
+				document.body.classList.toggle("oHidden")
+			}
+		</script>
 	</div>
-</body>
-</html>
+</body></html>
